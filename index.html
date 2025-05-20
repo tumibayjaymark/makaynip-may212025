@@ -148,8 +148,10 @@ Thank you for being the love of my life, my forever and always. Here’s to coun
       function startBgMusic() {
         bgMusic.play().catch(() => {});
         window.removeEventListener('click', startBgMusic);
+        window.removeEventListener('touchstart', startBgMusic);
       }
       window.addEventListener('click', startBgMusic);
+      window.addEventListener('touchstart', startBgMusic);
 
       // Lower background music when main audio or video plays
       function lowerMusic() {
